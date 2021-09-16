@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>todo app</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-3.6.0.js"></script>
+	<script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<img src="ressources/bg-mobile-dark.jpg">
+			<div class="title">T O D O</div>
+			<div class="newTodoContainer">
+				<input type="text" name="newTodo" class="newTodo" placeholder="Create a new todo..." id="newTodo">
+				<input type="submit" name="" class="addTodo displayInline" v-on:click="newTodo()" value="create">
+			</div>
+		</div>
+		<div id="todoContainer">
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		let i = 0;
+		let app = new Vue({
+			el: "#app",
+			data: {
+				
+			},
+			methods: {
+				newTodo: function(){
+					i += 1;
+					let getValue = document.getElementById('newTodo').value;
+					if (getValue == "" || getValue == " "){
+						window.alert('The input must be not empty')
+					}else{
+						let chekbox = "<input class='checkbox displayInline' type='checkbox' id='" + i + "'>";
+						let newTodoVar = "<input type='text' name='todo' disabled='disabled' class='todo' placeholder='" + getValue + "'title='" + getValue + "id='" + i + "' onclick='finishTask(this.id)' ><br><br>";
+						$("#todoContainer").append(chekbox);
+						$("#todoContainer").append(newTodoVar);
+					}
+				}
+			}
+		});
+		function finishTask(clicked){
+			window.alert(clicked);
+			$("#" + clicked).css('text-decoration', 'line-through');
+		}
+	</script>
+</body>
+</html>

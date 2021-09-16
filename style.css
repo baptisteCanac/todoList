@@ -1,0 +1,80 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: #171723;
+}
+.header{
+	position: relative;
+  	text-align: center;
+  	color: white;
+}
+.title{
+	position: absolute;
+	top: 25%;
+  	left: 45%;
+ 	transform: translate(-50%, -50%);
+ 	font-size: 2em;
+ 	font-weight: bold;
+}
+.newTodoContainer{
+	position: absolute;
+	top: 60%;
+  	left: 50%;
+  	font-weight: bold;
+  	font-size: 1.3em;
+ 	transform: translate(-50%, -50%);
+}
+.newTodo{
+	background: #25273d;
+ 	color: #6d6f86;
+ 	border: 2px solid transparent;
+ 	border-radius: 5px;
+ 	width: 250px;
+ 	height: 40px;
+ 	outline: none;
+ 	transition-duration: 1s;
+}
+.newTodo:hover{
+	transition-duration: 1s;
+	border: 2px solid #37aa94;
+}
+.newTodo:focus{
+	border-radius: 50px;
+}
+.addTodo{
+	color: #fff;
+	background: #25273d;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	transition-duration: 1s;
+	width: 100px;
+	height: 45px;
+	cursor: pointer;
+}
+#todoContainer{
+	text-align: center;
+}
+.addTodo:hover{
+	transition-duration: 1s;
+	border: 2px solid #37aa94;
+}
+.todo{
+	color: #fff;
+	background: #25273d;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	transition-duration: 0.5s;
+	width: 250px;
+	height: 45px;
+	cursor: text;
+}
+.todo:hover{
+	transition-duration: 0.5s;
+	border: 2px solid #37aa94;
+}
+.checkbox{
+	margin: 5px;
+	width: 30px;
+	height: 30px;
+}
